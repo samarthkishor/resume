@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{enumitem}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{nopageno} % remove page numbers
+
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}
+\titlespacing{\subsubsection}
+{0em}
+{0em}
+{1em} % space after subsubsection
+
+\renewcommand{\maketitle}{
+\begin{center}
+{\huge\bfseries\theauthor}
+
+\vspace{0.25em}
+
+samarthkishor1@gmail.com
+
+\end{center}
+}
+
+% Handle the Work Experience subheadings
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\workSubheading}[5]{
+\item
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\large#1} & #2 \\
+\textit{#3} & #4
+\end{tabular*}
+\vspace{-1em}
+\begin{itemize}
+\item #5
+\end{itemize}
+\vspace{0.25em}
+}
+
+% Handle the Education subheadings
+\newcommand{\eduSubheading}[4]{
+\item
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\large#1} & #2 \\
+\textit{#3} & #4
+\end{tabular*}
+}
+
+% Handle the Skills entries
+\newlength{\spacebox}
+\settowidth{\spacebox}{Programming}
+
+\newcommand{\skillEntry}[2]{
+    \noindent\hangindent=2em\hangafter=0 % Indentation
+    \parbox{\spacebox}{        % Box to align text
+    \raggedright{\textit{#1}}}               % Entry name
+    \hspace{1.5em} #2 \par \vspace{0.75em}}    % Entry value   
+
+
+% Begin Resume
+\begin{document}
+
+\title{R\'esum\'e}
+\author{Samarth Kishor}
+
+\maketitle
+
+%-----------------------------------------------
+
+\section{Work Experience}
+
+\resumeSubHeadingListStart
+    \workSubheading{Impact Makers}{Richmond, VA}
+    {Intern}{Summer 2017}
+    {Helped set up an automated testing framework for a web app using the Nightmare JavaScript automation library and gained valuable experience in Agile and Scrum.}
+    
+    \workSubheading{Maggie L. Walker Governor's School Mentorship Program}{Richmond, VA}
+    {Mentee}{2016--2017}
+    {Worked with a University of Richmond computer science professor to build an iOS app and conducted research on how the development process and app performance is affected by using the React Native framework instead of conventional methods.}
+    
+    \workSubheading{DriveFactor Inc.}{Glen Allen, VA}
+    {Intern}{Summer 2014}
+    {Built a web application using Python, JavaScript, HTML, and SQL which meaningfully displayed telematics data hosted on AWS.}
+\resumeSubHeadingListEnd
+
+%-----------------------------------------------
+
+\section{Education}
+
+\resumeSubHeadingListStart
+    \eduSubheading{University of Virginia}{Charlottesville, VA}
+    {Bachelor of Arts in Computer Science}{Expected Graduation: 2021}
+    
+    \eduSubheading{Maggie L. Walker Governor's School}{Richmond, VA}
+    {Advanced Studies Diploma}{2013--2017}
+    \vspace{-1em}
+    \begin{itemize}
+    \item Completed 142 hours of community service.
+    \item Cross Country and Outdoor Track athlete.
+    \item NHS\ \ $\cdotp$\ \ Mu Alpha Theta\ \ $\cdotp$\ \ Sociedad Honoraria Hisp\'anica\ \ $\cdotp$\ \ Japanese Honor Society
+    \end{itemize}
+\resumeSubHeadingListEnd
+
+%-----------------------------------------------
+
+\section{Skills}
+
+\skillEntry{Programming Languages}
+{JavaScript\ \ $\cdotp$\ \ Python\ \ $\cdotp$\ \ Swift\ \ $\cdotp$\ \ \LaTeX\ \ $\cdotp$\ \ HTML\ \ $\cdotp$\ \ CSS}
+
+\skillEntry{Mobile App Development}
+{Swift\ \ $\cdotp$\ \ React Native}
+
+\skillEntry{Languages}
+{English\ \ $\cdotp$\ \ Spanish\ \ $\cdotp$\ \ Hindi\ \ $\cdotp$\ \ Japanese}
+
+
+%-----------------------------------------------
+
+\section{Community Service}
+
+\resumeSubHeadingListStart
+    \workSubheading{Music Orchard}{Richmond, VA}
+    {Mentor}{2013--2017}
+    {Provided pro bono private saxophone lessons to elementary school children.}
+    
+    \workSubheading{Sacred Heart Center}{Richmond, VA}
+    {Volunteer}{2016}
+    {Entered attendance records into a database, called students in Spanish, and helped Spanish-speaking adults with GED preparation in the computer lab.}
+\resumeSubHeadingListEnd
+
+\end{document}
