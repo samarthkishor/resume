@@ -6,9 +6,11 @@
 \usepackage{enumitem}
 \usepackage{nopageno} % remove page numbers
 
+% Based on Sourabh Bajaj's template at https://github.com/sb2nov/resume
+
 % Reformat the section headers
 \titleformat{\section}
-{\Large\bfseries}
+{\scshape\Large}
 {}
 {0em}
 {}[\titlerule]
@@ -53,10 +55,10 @@ samarthkishor1@gmail.com
 \settowidth{\spacebox}{Programming Languages}
 
 \newcommand{\skillEntry}[2]{
-    \item
-    \hspace{1em}\parbox{\spacebox}{
-    \raggedright{\textbf{#1}}}
-    \hspace{-2.5em} #2 \par}
+\item
+\hspace{1em}\parbox{\spacebox}{
+\raggedright{\textbf{#1}}}
+\hspace{-2.5em} #2 \par}
 
 
 % Begin Resume
