@@ -1,3 +1,5 @@
+% Based on Sourabh Bajaj's resume template at https://github.com/sb2nov/resume
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
@@ -5,8 +7,6 @@
 \usepackage{titling}
 \usepackage{enumitem}
 \usepackage{nopageno} % remove page numbers
-
-% Based on Sourabh Bajaj's template at https://github.com/sb2nov/resume
 
 % Reformat the section headers
 \titleformat{\section}
@@ -26,7 +26,7 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 
 \end{center}}
 
-% Handle the Work Experience subheadings
+% Handle the Work Experience and Projects subheadings
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
@@ -74,8 +74,9 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 \section{Education}
 
 \resumeSubHeadingListStart
+
 \eduSubheading{University of Virginia}{Charlottesville, VA}
-{Bachelor of Arts in Computer Science}{Expected Graduation: 2021}
+{BA Computer Science}{Expected Graduation: 2021}
 \vspace{-1em}
 \begin{itemize}
 \item Cumulative GPA: 3.8
@@ -89,6 +90,7 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 % \item Cross Country and Outdoor Track athlete.
 % \item NHS\ \ $\cdotp$\ \ Mu Alpha Theta\ \ $\cdotp$\ \ Sociedad Honoraria Hisp\'anica\ \ $\cdotp$\ \ Japanese Honor Society
 % \end{itemize}
+
 \resumeSubHeadingListEnd
 
 %-----------------------------------------------
@@ -97,6 +99,7 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 \section{Work Experience}
 
 \resumeSubHeadingListStart
+
 \workSubheading{Impact Makers Inc.}{Richmond, VA}
 {Intern}{Summer 2017}
 {Worked with the IM Connect team to help set up an automated testing framework for a web app using the Nightmare JavaScript automation library and gained valuable experience in Agile and Scrum.}
@@ -108,6 +111,7 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 \workSubheading{DriveFactor Inc.}{Glen Allen, VA}
 {Intern}{Summer 2014}
 {Built a web application using Python, JavaScript, HTML, and SQL which meaningfully displayed telematics data hosted on AWS.}
+
 \resumeSubHeadingListEnd
 
 %-----------------------------------------------
@@ -116,6 +120,7 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 \section{Skills}
 
 \resumeSubHeadingListStart
+
 \skillEntry{Programming Languages}
 {JavaScript\ \ $\cdotp$\ \ Python\ \ $\cdotp$\ \ \LaTeX\ \ $\cdotp$\ \ HTML\ \ $\cdotp$\ \ CSS}
 
@@ -124,21 +129,45 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 
 \skillEntry{Languages}
 {English\ \ $\cdotp$\ \ Spanish\ \ $\cdotp$\ \ Hindi\ \ $\cdotp$\ \ Japanese}
+
 \resumeSubHeadingListEnd
 
 %-----------------------------------------------
 
 \vspace{-1.5em}
-\section{Community Service}
+\section{Projects}
 
 \resumeSubHeadingListStart
-\workSubheading{Music Orchard}{Richmond, VA}
-{Mentor}{2013--2017}
-{Provided pro bono private saxophone lessons to elementary school children.}
 
-\workSubheading{Sacred Heart Center}{Richmond, VA}
-{Volunteer}{2016}
-{Entered attendance records into a database, called students in Spanish, and helped Spanish-speaking adults with GED preparation in the computer lab.}
+\workSubheading{WalkSafe}{Java\ $\cdotp$\ Android Studio}
+{https://github.com/jtk5aw/WalkSafe}{Hack UVA (March 2018)}
+{An proof-of-concept Android app created in 24 hours that makes university campuses safer by connecting students with Residential Advisors.}
+
+\workSubheading{Reddit Short Story to PDF}{Python\ $\cdotp$\ \LaTeX}
+{https://devpost.com/software/reddit-short-story-to-pdf}{MLH Local Hack Day (December 2017)}
+{\textbf{Best Overall Award}\\ A command line utility created in 12 hours that gets the top responses from the r/WritingPrompts subreddit and downloads them as a PDF.}
+
+\workSubheading{Astronomy Picture of the Day CLI}{Node.js\ $\cdotp$\ Python\ $\cdotp$\ \LaTeX}
+{https://github.com/samarthkishor/astronomy-picture-of-the-day-cli}{}
+{A program that scrapes NASA's Astronomy Picture of the Day website and automatically creates a pdf with the picture and explanation.}
+
 \resumeSubHeadingListEnd
+
+%-----------------------------------------------
+
+% \vspace{-1.5em}
+% \section{Community Service}
+
+% \resumeSubHeadingListStart
+
+% \workSubheading{Music Orchard}{Richmond, VA}
+% {Mentor}{2013--2017}
+% {Provided pro bono private saxophone lessons to elementary school children.}
+
+% \workSubheading{Sacred Heart Center}{Richmond, VA}
+% {Volunteer}{2016}
+% {Entered attendance records into a database, called students in Spanish, and helped Spanish-speaking adults with GED preparation in the computer lab.}
+
+% \resumeSubHeadingListEnd
 
 \end{document}
