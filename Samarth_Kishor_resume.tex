@@ -1,6 +1,6 @@
 % Based on Sourabh Bajaj's resume template at https://github.com/sb2nov/resume
 
-\documentclass{article}
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{titlesec}
@@ -28,19 +28,19 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 
 % Handle the Work Experience and Projects subheadings
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2em}}
 
 \newcommand{\workSubheading}[5]{
+\setlength\itemsep{-0.25em}
 \item
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{\large#1} & {\small #2} \\
 \textit{#3} & {#4}
 \end{tabular*}
-\vspace{-1em}
+\vspace{-1.25em}
 \begin{itemize}
 \item #5
-\end{itemize}
-\vspace{0.25em}}
+\end{itemize}}
 
 % Handle the Education subheadings
 \newcommand{\eduSubheading}[4]{
@@ -55,6 +55,7 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 \settowidth{\spacebox}{Programming Languages}
 
 \newcommand{\skillEntry}[2]{
+\setlength\itemsep{0em}
 \item
 \hspace{1em}\parbox{\spacebox}{
 \raggedright{\textbf{#1}}}
@@ -68,7 +69,7 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 \author{Samarth Kishor}
 
 \maketitle
-
+\vspace{-3em}
 %-----------------------------------------------
 
 \section{Education}
@@ -77,9 +78,10 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 
 \eduSubheading{University of Virginia}{Charlottesville, VA}
 {BA Computer Science, Technology Entrepreneurship Minor}{Expected Graduation: 2021}
-\vspace{-1em}
+\vspace{-1.25em}
 \begin{itemize}
-\item Cumulative GPA: 3.7
+\item \textbf{Cumulative GPA:} 3.7 (Dean's List)
+\item \textbf{Relevant Coursework:} Software Development Methods\ \ $\cdotp$\ \ Program and Data Representation\ \ $\cdotp$\ \ Algorithms\ \ $\cdotp$\ \ Theory of Computation
 \end{itemize}
 
 % \eduSubheading{Maggie L. Walker Governor's School}{Richmond, VA}
@@ -95,18 +97,17 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 
 %-----------------------------------------------
 
-\vspace{-1.5em}
 \section{Work Experience}
 
 \resumeSubHeadingListStart{}
 
 \workSubheading{University of Virginia}{Charlottesville, VA}
 {Undergraduate Teaching Assistant}{Fall 2018--Current}
-{Teaching Assistant for CS 2102 (Discrete Math). Helped students in office hours and graded assignments.}
+{Teaching Assistant for CS 2102 (Discrete Mathematics). Helped students in office hours, suggested improvements to the course, and graded assignments.}
 
 \workSubheading{Impact Makers Inc.}{Richmond, VA}
 {Junior Security Associate}{Summer 2018}
-{Produced internal IT security documentation and policies for the company intranet hosted on Microsoft Azure. Took on additional roles including refactoring and setting up an automated build and test pipeline for an internal AWS web application and improving the Impact Makers WordPress website.}
+{Produced internal IT security documentation and policies for the company intranet hosted on Azure. Took on additional roles including refactoring and setting up an automated build and test pipeline for an internal AWS web application and improving the Impact Makers WordPress website.}
 
 \workSubheading{Impact Makers Inc.}{Richmond, VA}
 {Intern}{Summer 2017}
@@ -124,16 +125,15 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 
 %-----------------------------------------------
 
-\vspace{-2.5em}
 \section{Skills}
 
 \resumeSubHeadingListStart{}
 
 \skillEntry{Programming Languages}
-{Python\ \ $\cdotp$\ \ JavaScript\ \ $\cdotp$\ \ Java\ \ $\cdotp$\ \ C++\ \ $\cdotp$\ \ Emacs Lisp}
+{Python\ \ $\cdotp$\ \ JavaScript (Node.js)\ \ $\cdotp$\ \ C++\ \ $\cdotp$\ \ Java\ \ $\cdotp$\ \ Emacs Lisp}
 
-% \skillEntry{Mobile App Development}
-% {iOS\ \ $\cdotp$\ \ React Native}
+\skillEntry{Development \\Technologies}
+{Git\ \ $\cdotp$\ \ Shell scripting\ \ $\cdotp$\ \ Linux\ \ $\cdotp$\ \ React Native\ \ $\cdotp$\ \ Vim/Emacs}
 
 \skillEntry{Languages}
 {English\ \ $\cdotp$\ \ Spanish\ \ $\cdotp$\ \ Hindi\ \ $\cdotp$\ \ Japanese\ \ $\cdotp$\ \ Urdu}
@@ -142,7 +142,6 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 
 %-----------------------------------------------
 
-\vspace{-1.5em}
 \section{Projects}
 
 \resumeSubHeadingListStart{}
@@ -155,9 +154,9 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 {https://devpost.com/software/reddit-short-story-to-pdf}{MLH Local Hack Day (December 2017)}
 {\textbf{Best Overall Award}\\ A command line utility that gets the top responses from the r/WritingPrompts subreddit and downloads them as a PDF.}
 
-%% \workSubheading{Astronomy Picture of the Day CLI}{Node.js\ $\cdotp$\ Python\ $\cdotp$\ \LaTeX}
-%% {https://github.com/samarthkishor/astronomy-picture-of-the-day-cli}{}
-%% {A program that scrapes NASA's Astronomy Picture of the Day website and automatically creates a pdf with the picture and explanation.}
+\workSubheading{Astronomy Picture of the Day CLI}{Node.js\ $\cdotp$\ Python\ $\cdotp$\ \LaTeX}
+{https://github.com/samarthkishor/astronomy-picture-of-the-day-cli}{}
+{A program that scrapes NASA's Astronomy Picture of the Day website and automatically creates a pdf with the picture and explanation.}
 
 \resumeSubHeadingListEnd{}
 
@@ -179,3 +178,8 @@ samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
 % \resumeSubHeadingListEnd
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
