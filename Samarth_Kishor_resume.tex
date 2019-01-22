@@ -1,181 +1,72 @@
-% Based on Sourabh Bajaj's resume template at https://github.com/sb2nov/resume
+% Modified from Trey Hunner's template (https://github.com/treyhunner/resume)
 
-\documentclass[10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
-\usepackage{titlesec}
-\usepackage{titling}
-\usepackage{enumitem}
-\usepackage{nopageno} % remove page numbers
+\documentclass{resume}
 
-% Reformat the section headers
-\titleformat{\section}
-{\scshape\Large}
-{}
-{0em}
-{}[\titlerule]
+\usepackage[left=0.75in,top=0.5in,right=0.75in,bottom=0.5in]{geometry}
 
-% Reformat the title
-\renewcommand{\maketitle}{
-\begin{center}
-{\huge\bfseries\theauthor}
+\name{Samarth Kishor}
+\address{ 804--300--6897 \\ samarthkishor1@gmail.com \\ github.com/samarthkishor}
 
-\vspace{0.5em}
+\def\nameskip{\bigskip}
+\def\sectionskip{\medskip}
 
-samarthkishor1@gmail.com $\cdot$ github.com/samarthkishor
-
-\end{center}}
-
-% Handle the Work Experience and Projects subheadings
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2em}}
-
-\newcommand{\workSubheading}[5]{
-\setlength\itemsep{-0.25em}
-\item
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-\textbf{\large#1} & {\small #2} \\
-\textit{#3} & {#4}
-\end{tabular*}
-\vspace{-1.25em}
-\begin{itemize}
-\item #5
-\end{itemize}}
-
-% Handle the Education subheadings
-\newcommand{\eduSubheading}[4]{
-\item
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-\textbf{\large#1} & {\small #2} \\
-\textit{#3} & {#4}
-\end{tabular*}}
-
-% Handle the Skills entries
-\newlength{\spacebox}
-\settowidth{\spacebox}{Programming Languages}
-
-\newcommand{\skillEntry}[2]{
-\setlength\itemsep{0.25em}
-\item
-\hspace{1em}\parbox{\spacebox}{
-\raggedright{\textbf{#1}}}
-\hspace{-2.5em} #2 \par}
-
-
-% Begin Resume
 \begin{document}
 
-\title{R\'esum\'e}
-\author{Samarth Kishor}
+\begin{rSection}{Education}
+  \begin{rSubsection}{University of Virginia}{Expected: May 2021}{B.A. Computer Science, Technology Entrepreneurship Minor}{Charlottesville, VA}
+  \item \textbf{Cumulative GPA:} \texttt{3.67}
+  % \item \textbf{Relevant Coursework:} Data Structures, Algorithms, Theory of Computation\, Data Visualization, Linear Algebra
+  \item \textbf{Organizations:} University Salsa Club, Hackers@UVA, ACM
+  \end{rSubsection}
+\end{rSection}
 
-\maketitle
-\vspace{-3em}
-%-----------------------------------------------
+\begin{rSection}{Experience}
 
-\section{Education}
+  \begin{rSubsection}{University of Virginia}{Fall 2018--Current}{Undergraduate Teaching Assistant for CS 2102 (Discrete Mathematics)}{Charlottesville, VA}
+  \item Helped students improve their understanding of proof techniques and propositional logic
+  \item Suggested improvements to the course which the professor implemented
+  \item Graded assignments and exams
+  \end{rSubsection}
 
-\resumeSubHeadingListStart{}
+  \begin{rSubsection}{Impact Makers Inc.}{June 2018--August 2018}{Junior Security Associate}{Richmond, VA}
+  \item Produced internal IT security documentation and policies for the company's Azure intranet
+  \item Refactored and set up an automated build and test pipeline for an internal AWS web application written with the Express.js framework that boosted developer productivity and improved code quality
+  \item Implemented aesthetic and functional improvements to the company's WordPress website
+  \end{rSubsection}
 
-\eduSubheading{University of Virginia}{Charlottesville, VA}
-{BA Computer Science, Technology Entrepreneurship Minor}{Expected Graduation: 2021}
-\vspace{-1.25em}
-\begin{itemize}
-\item \textbf{Cumulative GPA:} 3.67
-\item \textbf{Relevant Coursework:} Software Development Methods\ \ $\cdotp$\ \ Program and Data Representation\ \ $\cdotp$\ \ Algorithms\ \ $\cdotp$\ \ Theory of Computation\ \ $\cdotp$\ \ Data Visualization\ \ $\cdotp$\ \ Linear Algebra
-\end{itemize}
+  \begin{rSubsection}{Impact Makers Inc.}{June 2017--August 2017}{Software Engineering Intern}{Richmond, VA}
+  \item Worked with a small team in a fast-paced Agile environment
+  \item Communicated with non-technical co-workers
+  \item Set up an automated testing framework for a React web app in production using Nighmare.js, Mocha.js, and Gulp that increased the team's productivity by enabling a continuous integration (CI) environment
+  \end{rSubsection}
 
-% \eduSubheading{Maggie L. Walker Governor's School}{Richmond, VA}
-% {Advanced Studies Diploma}{2013--2017}
-% \vspace{-1em}
-% \begin{itemize}
-% \item Completed 142 hours of community service.
-% \item Cross Country and Outdoor Track athlete.
-% \item NHS\ \ $\cdotp$\ \ Mu Alpha Theta\ \ $\cdotp$\ \ Sociedad Honoraria Hisp\'anica\ \ $\cdotp$\ \ Japanese Honor Society
-% \end{itemize}
+\end{rSection}
 
-\resumeSubHeadingListEnd{}
+\begin{rSection}{Skills}
 
-%-----------------------------------------------
+  \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Leadership & Choreographed a Rueda dance for the Fall 2018 Salsa Showcase\\
+    Computer Languages & Python, Javascript (Node.js), C++, Java, Emacs Lisp\\
+    Tools \& Technologies & Vim, Emacs, Git, Shell Scripting, React, \LaTeX{}, GNU/Linux, UNIX\\
+    Protocols \& APIs & XML, JSON, REST\\
+    Human Languages & English, Spanish, Hindi, Urdu, Japanese
+  \end{tabular}
 
-\section{Work Experience}
+\end{rSection}
 
-\resumeSubHeadingListStart{}
+\begin{rSection}{Projects}
 
-\workSubheading{University of Virginia}{Charlottesville, VA}
-{Undergraduate Teaching Assistant}{Fall 2018--Current}
-{Teaching Assistant for CS 2102 (Discrete Mathematics). Helped students in office hours, suggested improvements to the course, and graded assignments.}
+  \begin{rSubsection}{TriTag}{September 2018}{https://devpost.com/software/tritag}{MedHacks}
+  \item Group won a Top Ten in Category Award out of hundreds of participants
+  \item Created a modern, digital approach to Triage involving an iPad app and an Arduino-based identifier.
+  \end{rSubsection}
 
-\workSubheading{Impact Makers Inc.}{Richmond, VA}
-{Junior Security Associate}{Summer 2018}
-{Produced internal IT security documentation and policies for the company intranet hosted on Azure. Took on additional roles including refactoring and setting up an automated build and test pipeline for an internal AWS web application and improving the Impact Makers WordPress website.}
+  \begin{rSubsection}{Reddit Short Story to PDF}{December 2017}{https://devpost.com/software/reddit-short-story-to-pdf}{MLH Local Hack Day}
+  \item Group won the Best Overall Award
+  \item Wrote a command line program that gets the top responses from the \texttt{r/WritingPrompts} subreddit using the Reddit API and processes them into a PDF using Python and \LaTeX{}.
+  \end{rSubsection}
 
-\workSubheading{Impact Makers Inc.}{Richmond, VA}
-{Intern}{Summer 2017}
-{Worked with the IM Connect team to set up an automated testing framework for a React web app using Nightmare.js, Mocha.js, and Gulp. Gained valuable experience in Agile, Scrum, and continuous integration (CI).}
-
-\workSubheading{Maggie L. Walker Governor's School Mentorship Program}{Richmond, VA}
-{Mentee}{2016--2017}
-{Worked with a University of Richmond computer science professor to build an iOS app using Swift and the React Native framework.}
-
-%% \workSubheading{DriveFactor Inc.}{Glen Allen, VA}
-%% {Intern}{Summer 2014}
-%% {Built a web application using Python, JavaScript, HTML, and SQL which meaningfully displayed telematics data hosted on AWS.}
-
-\resumeSubHeadingListEnd{}
-
-%-----------------------------------------------
-
-\section{Skills}
-
-\resumeSubHeadingListStart{}
-
-\skillEntry{Programming Languages}
-{Python\ \ $\cdotp$\ \ JavaScript (Node.js)\ \ $\cdotp$\ \ C++\ \ $\cdotp$\ \ Java\ \ $\cdotp$\ \ Emacs Lisp}
-
-\skillEntry{Development \\Technologies}
-{Git\ \ $\cdotp$\ \ Shell scripting\ \ $\cdotp$\ \ React Native\ \ $\cdotp$\ \ GNU/Linux \& Unix\ \ $\cdotp$\ \ Vim \& Emacs}
-
-\skillEntry{Languages}
-{English\ \ $\cdotp$\ \ Spanish\ \ $\cdotp$\ \ Hindi\ \ $\cdotp$\ \ Japanese\ \ $\cdotp$\ \ Urdu}
-
-\resumeSubHeadingListEnd{}
-
-%-----------------------------------------------
-
-\section{Projects}
-
-\resumeSubHeadingListStart{}
-
-\workSubheading{TriTag}{React Native (JavaScript)\ $\cdotp$\ Arduino (C)}
-{https://devpost.com/software/tritag}{MedHacks (September 2018)}
-{\textbf{Top Ten in Category}\\ A modern, digital approach to Triage involving an iPad app and an Arduino-based model identifier.}
-
-\workSubheading{Reddit Short Story to PDF}{Python\ $\cdotp$\ \LaTeX}
-{https://devpost.com/software/reddit-short-story-to-pdf}{MLH Local Hack Day (December 2017)}
-{\textbf{Best Overall Award}\\ A command line utility that gets the top responses from the r/WritingPrompts subreddit and downloads them as a PDF.}
-
-\workSubheading{Astronomy Picture of the Day CLI}{Node.js\ $\cdotp$\ Python\ $\cdotp$\ \LaTeX}
-{https://github.com/samarthkishor/astronomy-picture-of-the-day-cli}{}
-{A program that scrapes NASA's Astronomy Picture of the Day website and automatically creates a pdf with the picture and explanation.}
-
-\resumeSubHeadingListEnd{}
-
-%-----------------------------------------------
-
-% \vspace{-1.5em}
-% \section{Community Service}
-
-% \resumeSubHeadingListStart
-
-% \workSubheading{Music Orchard}{Richmond, VA}
-% {Mentor}{2013--2017}
-% {Provided pro bono private saxophone lessons to elementary school children.}
-
-% \workSubheading{Sacred Heart Center}{Richmond, VA}
-% {Volunteer}{2016}
-% {Entered attendance records into a database, called students in Spanish, and helped Spanish-speaking adults with GED preparation in the computer lab.}
-
-% \resumeSubHeadingListEnd
+\end{rSection}
 
 \end{document}
 
