@@ -92,6 +92,7 @@
   \item[]
   }{
   \end{list}
+  \vspace{-0.25em}
 }
 
 % Used to format job listing
