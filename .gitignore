@@ -25,3 +25,4 @@
 *.fdb_latexmk
 .vscode/settings.json
 *.swp
+/auto/
