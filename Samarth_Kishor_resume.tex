@@ -12,7 +12,7 @@
 \urlstyle{same}
 
 \name{Samarth Kishor}
-\address{804--300--6897 \\ sk4gz@virginia.edu \\ samarthkishor.github.io \\ github.com/samarthkishor}
+\address{804--300--6897 \\ samarthkishor1@gmail.com \\ samarth.me \\ github.com/samarthkishor}
 
 \def\nameskip{\medskip}
 \def\sectionskip{\medskip}
@@ -20,47 +20,32 @@
 \begin{document}
 
 \vspace{-1em}
-\begin{rSection}{Education}
+\begin{rSection}{Experience}
 
-  \begin{rSubsection}{University of Virginia}{Expected: May 2021}{B.A. Computer Science, Technology Entrepreneurship Minor}{Charlottesville, VA}
-    \item \textbf{Cumulative GPA:} 3.7
-    \item \textbf{Relevant Coursework:} Algorithms, Operating Systems, Compilers, Programming Languages, Data Visualization
+  \begin{rSubsection}{Amazon Web Services}{August 2022 -- Present}{Applied Scientist}{Arlington, VA}
+    \item Co-authored a paper and patent application for a technique to apply static analyses to automatically scale the verification of real-world security protocol implementations. Implemented the technique on a 100k+ LoC Go codebase.
+    \item Designed and implemented \href{https://github.com/awslabs/ar-go-tools}{static analyses} (program slicing, information flow, constrained mutability) to verify security properties for the \href{https://github.com/aws/amazon-ssm-agent}{SSM Agent Go codebase} deployed on millions of hosts.
+    \item Led the verification of safety and liveness properties of a distributed protocol used for authorization by the majority of services at AWS via first-order logic modeling (Ivy) as well as bounded model-checking (P).
+  \end{rSubsection}
+
+  \begin{rSubsection}{Amazon Web Services}{July 2021 -- August 2022}{Software Development Engineer}{Arlington, VA}
+    \item Mentored new hires and interns in Go programming, compilers, and advanced testing techniques.
+    \item Wrote an end-to-end data transformation compiler in Go for a JSON-like language used to transfer terabytes of customer data per day. Rigorously demonstrated the correctness of the implementation with property-based testing.
+    \item Simplified the design of a concurrent process manager in Go to eliminate all known data races.
+  \end{rSubsection}
+
+  \begin{rSubsection}{Amazon Web Services}{May 2020 -- August 2020}{Software Development Engineer Intern}{Arlington, VA}
+    \item Extended an existing customer-facing AWS service by implementing a new serverless component in Python using Lambda, S3, and Dynamo.
+    \item Service made heavy use of concurrency and parallelism to save customers time and compute resources, and improved the performance of the existing process by over 200\%.
   \end{rSubsection}
 
 \end{rSection}
 
-\begin{rSection}{Experience}
-  \begin{rSubsection}{Amazon Web Services}{May 2020 -- Current}{Software Development Engineer Intern}{Arlington, VA}
-    \item Extended an existing customer-facing AWS service by implementing a new serverless component in Python using Lambda, S3, and Dynamo.
-    \item Service made heavy use of concurrency and parallelism to save customers time and compute resources, and to improve performance of the existing process by over 200\%.
-    \item Gained valuable experience in designing scalable systems and minimizing performance bottlenecks.
-  \end{rSubsection}
+\begin{rSection}{Education}
 
-  \begin{rSubsection}{University of Virginia}{Fall 2018 -- Current}{Head Teaching Assistant}{Charlottesville, VA}
-    \item Implemented new course material as a Head TA for CS 4610 Programming Languages (Current).
-    \item Worked as a TA for Discrete Mathematics (Fall 2018) and Theory of Computation (Fall 2019 -- Spring 2020).
-    % \item Improved students' understanding of proof techniques, computation, and propositional logic in office hours.
+  \begin{rSubsection}{University of Virginia}{August 2027 -- May 2021}{B.A. Computer Science, Technology Entrepreneurship Minor}{Charlottesville, VA}
+    \item \textbf{TA Experience:} Programming Languages (Head TA), Theory of Computation, Discrete Mathematics
   \end{rSubsection}
-
-  \begin{rSubsection}{WizeHire Inc. (Startup)}{May 2019 -- August 2019}{Software Engineering Intern}{Remote}
-    \item Streamlined the billing management experience for hundreds of customers by building a user interface with React, Redux, and Django API endpoints.
-    \item Improved third-party workflows by building a server-side engine in Django to automatically match jobs using regular expressions, saving the company's support team 10+ hours a week in manually matching this data.
-    \item Increased test coverage by 10\% using Selenium for test automation in the Jenkins CI/CD pipeline.
-    % \item Enhanced deep linking in WordPress and integration with the web application by creating API endpoints in Django.
-  \end{rSubsection}
-
-  \begin{rSubsection}{Capital One}{May 2019}{Capital One Software Engineering Summit Attendee}{Richmond, VA}
-    \item Selected after a rigorous application process to attend a week long summit for undergraduate students.
-    \item Learned valuable technologies including Machine Learning, iOS/Android app development, Arduino, and AWS in seminars
-    % \item Implemented the React front-end of a full-stack ride sharing web application at the summit hackathon.
-  \end{rSubsection}
-
-  % \begin{rSubsection}{Impact Makers Inc.}{Summer 2017 \& Summer 2018}{Software Engineering Intern}{Richmond, VA}
-  %   \item Increased test coverage by 30\% and enabled a CI pipeline by implementing an automated testing framework with Selenium for a production React web application hosted on AWS that was used by hundreds of clients in the healthcare industry.
-  %   \item Improved developer productivity and code quality by implementing an automated build and test pipeline for an internal Node.js web application hosted on AWS;\@ gained valuable experience with cloud technologies.
-  %   \item Improved documentation by 60\% by producing internal IT security policies for the company's Microsoft Azure intranet.
-  %   \item  Gained valuable experience with Agile development and cloud technologies.
-  % \end{rSubsection}
 
 \end{rSection}
 
@@ -95,12 +80,13 @@
 \begin{rSection}{Skills}
 
   \begin{tabular}{ @{} >{\bfseries}l @{\hspace{5ex}} l }
-    Programming Languages & \textit{Proficient}: Python, JavaScript, C++ \hspace{1.5ex}
-                            \textit{Familiar}: Java, OCaml, Julia, Clojure, Prolog\\
-    Tools \& Technologies & AWS, Node.js, React, Django, MySQL, Selenium, Jenkins, Git, GNU/Linux\\
+    Programming Languages & \textit{Fluent}: Go, Python, Java \hspace{1.5ex}
+                            \textit{Proficient}: JavaScript, OCaml \hspace{1.5ex}
+                            \textit{Familiar}: Rust, Prolog\\
+    Tools \& Technologies & Automated Reasoning (Static analysis, P, Ivy), AWS, Redis, GNU/Linux\\
     Human Languages       & \textit{Fluent}: English \hspace{1.5ex}
-                            \textit{Proficient}: Spanish, Hindi, Urdu \hspace{1.5ex}
-                            \textit{Familiar}: Japanese
+                            \textit{Proficient}: Spanish, Japanese \hspace{1.5ex}
+                            \textit{Familiar}: Hindi, Urdu
   \end{tabular}
 
 \end{rSection}
