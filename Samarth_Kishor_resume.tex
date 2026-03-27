@@ -2,7 +2,17 @@
 
 \documentclass{resume}
 
-\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Charter}[
+    Path           = ./fonts/Charter/,
+    Extension      = .ttf,
+    Ligatures      = TeX,
+    BoldFont       = Charter-Bold,
+    ItalicFont     = Charter-Italic,
+    BoldItalicFont = Charter-BoldItalic
+]
+
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{
@@ -12,7 +22,7 @@
 \urlstyle{same}
 
 \name{Samarth Kishor}
-\address{804--300--6897 \\ samarthkishor1@gmail.com \\ samarth.me \\ github.com/samarthkishor}
+\address{804--300--6897 \\ samarth@samarth.me \\ github.com/samarthkishor}
 
 \def\nameskip{\medskip}
 \def\sectionskip{\medskip}
@@ -23,15 +33,15 @@
 \begin{rSection}{Experience}
 
   \begin{rSubsection}{Amazon Web Services}{August 2022 -- Present}{Applied Scientist}{Arlington, VA}
-    \item Co-authored a paper and patent application for a technique to apply static analyses to automatically scale the verification of real-world security protocol implementations. Implemented the technique on a 100k+ LoC Go codebase.
-    \item Designed and implemented \href{https://github.com/awslabs/ar-go-tools}{static analyses} (program slicing, information flow, constrained mutability) to verify security properties for the \href{https://github.com/aws/amazon-ssm-agent}{SSM Agent Go codebase} deployed on millions of hosts.
-    \item Led the verification of safety and liveness properties of a distributed protocol used for authorization by the majority of services at AWS via first-order logic modeling (Ivy) as well as bounded model-checking (P).
+    \item Led the verification of safety properties of a widely-used internal distributed transaction protocol. Used fuzzing and bounded model checking for bug-finding, and SMT solvers for proof.
+    \item Designed and implemented \href{https://github.com/awslabs/ar-go-tools}{static analyses} in Go (program slicing, taint analysis, and syntactic analysis) to verify security properties for the \href{https://github.com/aws/amazon-ssm-agent}{Amazon SSM Agent codebase} deployed on millions of hosts.
+    % \item Wrote project proposals for senior leadership and mentored PhD student interns.
   \end{rSubsection}
 
   \begin{rSubsection}{Amazon Web Services}{July 2021 -- August 2022}{Software Development Engineer}{Arlington, VA}
-    \item Mentored new hires and interns in Go programming, compilers, and advanced testing techniques.
     \item Wrote an end-to-end data transformation compiler in Go for a JSON-like language used to transfer terabytes of customer data per day. Rigorously demonstrated the correctness of the implementation with property-based testing.
-    \item Simplified the design of a concurrent process manager in Go to eliminate all known data races.
+    \item Mentored new hires and interns in Go programming, compilers, and advanced testing techniques.
+    % \item Simplified the design of a concurrent process manager in Go to eliminate all known data races.
   \end{rSubsection}
 
   \begin{rSubsection}{Amazon Web Services}{May 2020 -- August 2020}{Software Development Engineer Intern}{Arlington, VA}
@@ -41,52 +51,39 @@
 
 \end{rSection}
 
+\begin{rSection}{Publications}
+
+  \begin{rSubsection}{Soundness Checking of Taint Flow Models}{TBD}{First author (AWS)}{Under Submission}
+    \item Used LLM agents to generate taint flow models of functions and symbolically checks their soundness.
+    \item The soundness checker uses light-weight static analyses and a Max-SAT solver to discharge proof obligations. Empirically demonstrated that the approach is more efficient than inter-procedural taint analysis in most cases when analyzing Go programs.
+  \end{rSubsection}
+
+  \begin{rSubsection}{Scaling Security Verification to Large Codebases}{May 2026}{Second author (AWS)}{S\&P '26: San Francisco, CA}
+    \item Applied static analyses to automatically scale the verification of real-world security protocol implementations by enforcing separation logic invariants.
+    \item Implemented the static analyses by extending the first-party Go pointer analysis library.
+  \end{rSubsection}
+
+\end{rSection}
+
 \begin{rSection}{Education}
 
-  \begin{rSubsection}{University of Virginia}{August 2027 -- May 2021}{B.A. Computer Science, Technology Entrepreneurship Minor}{Charlottesville, VA}
+  \begin{rSubsection}{University of Virginia}{August 2017 -- May 2021}{B.A. Computer Science, Technology Entrepreneurship Minor}{Charlottesville, VA}
     \item \textbf{TA Experience:} Programming Languages (Head TA), Theory of Computation, Discrete Mathematics
-  \end{rSubsection}
-
-\end{rSection}
-
-\begin{rSection}{Projects}
-
-  \begin{rSubsection}{OCamLox}{January 2020 -- April 2020}{https://github.com/samarthkishor/crafting-interpreters}{Personal Project}
-    \item Implemented an interpreter for a JavaScript-like programming language from the book \href{https://craftinginterpreters.com/}{\textit{Crafting Interpreters}}.
-    \item The interpreter consists of a hand-rolled recursive-descent parser and tree-walking evaluator written in OCaml.
-  \end{rSubsection}
-
-  \begin{rSubsection}{TriTag}{September 2018}{\url{https://devpost.com/software/tritag}}{MedHacks}
-    \item Group won a Top Ten in Category Award out of hundreds of participants.
-    \item Created a modern, digital approach to Triage involving an iPad app and an Arduino-based identifier.
-  \end{rSubsection}
-
-\end{rSection}
-
-\begin{rSection}{Leadership}
-
-  \begin{rSubsection}{HooHacks}{Fall 2018 -- Current}{External Relations Committee Co-Chair (Elected Position)}{Charlottesville, VA}
-    \item Raised over \$15,000 for the 2020 hackathon by working directly with sponsors such as Capital One and CoStar.
-    \item Coordinated workshops for 50+ students and served as a point-of-contact for sponsors during the 2019 hackathon.
-  \end{rSubsection}
-
-  \begin{rSubsection}{University Salsa Club}{Fall 2017 -- Current}{Choreographer}{Charlottesville, VA}
-    \item Choreographed dances for the Fall 2018 and Spring 2020 Salsa Showcase.
-    \item Performed for events in the Charlottesville community such as the Virginia Film Festival and Pancakes for Parkinson's.
+    \item \textbf{Extracurriculars:} Hackathon Club (committee co-chair), Salsa Club (choreographer and performer)
   \end{rSubsection}
 
 \end{rSection}
 
 \begin{rSection}{Skills}
 
-  \begin{tabular}{ @{} >{\bfseries}l @{\hspace{5ex}} l }
-    Programming Languages & \textit{Fluent}: Go, Python, Java \hspace{1.5ex}
-                            \textit{Proficient}: JavaScript, OCaml \hspace{1.5ex}
-                            \textit{Familiar}: Rust, Prolog\\
-    Tools \& Technologies & Automated Reasoning (Static analysis, P, Ivy), AWS, Redis, GNU/Linux\\
-    Human Languages       & \textit{Fluent}: English \hspace{1.5ex}
-                            \textit{Proficient}: Spanish, Japanese \hspace{1.5ex}
-                            \textit{Familiar}: Hindi, Urdu
+  \begin{tabular}{ @{} >{\bfseries}l @{\hspace{1em}} l }
+    Programming Languages & \textit{Fluent}: Go, Python, Java, Javascript $\cdot$
+                            \textit{Familiar}: OCaml, Rust, Prolog\\
+    Human Languages       & \textit{Fluent}: English $\cdot$
+                            \textit{Conversational}: Spanish, Japanese, Hindi, Urdu\\
+    Automated Reasoning & Static analysis, protocol modeling, separation logic, property-based testing\\
+    Software Engineering & AWS, distributed systems, NixOS, NoSQL databases, LLM agents
+
   \end{tabular}
 
 \end{rSection}

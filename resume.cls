@@ -83,7 +83,7 @@
 % Used to create large resume section
 \newenvironment{rSection}[1]{
   \sectionskip
-  {\scshape \Large #1}
+  {\scshape \normalsize #1}
   \sectionlineskip
   \hrule
   \begin{list}{}{
@@ -92,7 +92,6 @@
   \item[]
   }{
   \end{list}
-  \vspace{-0.25em}
 }
 
 % Used to format job listing
@@ -107,11 +106,14 @@
     {\em #3}                 \hfill                  {\em #4}% Stop a space
   }
   % \cdot used for bullets, items indented 0.5em
-  \begin{list}{$\cdot$}{\leftmargin=1.5em}
-    \itemsep -0.5em \vspace{-0.5em}
+  \begin{list}
+    {\raisebox{0.2em}{\tiny$\bullet$}}
+    {%
+      \setlength{\labelsep}{1.5em}
+      \setlength{\itemsep}{-0.5em}%
+    }
   }{
   \end{list}
-  \vspace{-0.25em}
 }
 
 \def\namesize{\huge}
