@@ -26,3 +26,4 @@
 .vscode/settings.json
 *.swp
 /auto/
+/.direnv/
