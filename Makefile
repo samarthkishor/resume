@@ -1,2 +1,2 @@
 compile:
-	nix-shell --run "lualatex Samarth_Kishor_resume.tex"
+	nix-shell --run "latexmk Samarth_Kishor_resume.tex"
